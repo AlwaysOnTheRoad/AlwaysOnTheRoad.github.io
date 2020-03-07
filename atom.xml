@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ontheroad.work/"/>
-  <updated>2020-03-07T12:25:44.667Z</updated>
+  <updated>2020-03-07T16:38:53.458Z</updated>
   <id>http://www.ontheroad.work/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>about</title>
+    <link href="http://www.ontheroad.work/about/"/>
+    <id>http://www.ontheroad.work/about/</id>
+    <published>2020-03-06T16:19:40.000Z</published>
+    <updated>2020-03-07T16:38:53.458Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;关于我&quot;&gt;&lt;a href=&quot;#关于我&quot; class=&quot;headerlink&quot; title=&quot;关于我&quot;&gt;&lt;/a&gt;关于我&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;姓名：&lt;/strong&gt; huadong&lt;br&gt;&lt;strong&gt;邮箱：&lt;/strong&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="生活" scheme="http://www.ontheroad.work/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="http://www.ontheroad.work/hello-world/"/>
     <id>http://www.ontheroad.work/hello-world/</id>
     <published>2020-03-05T18:56:36.632Z</published>
-    <updated>2020-03-07T12:25:44.667Z</updated>
+    <updated>2020-03-07T15:30:49.944Z</updated>
     
     <summary type="html">
     

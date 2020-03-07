@@ -32,7 +32,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="page-" class="article article-type-page" itemscope
+  <article id="post-about" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -48,6 +48,43 @@
     
 
     
+    <div class="article-meta">
+      <a href="/about/" class="article-date">
+  <time datetime="2020-03-06T16:19:40.000Z" itemprop="datePublished">2020-03-07</time>
+</a>
+      
+      
+      
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">21字</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">1分钟</span>
+        </span>
+    </span>
+</div>
+
+      
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
 
     
 
@@ -59,7 +96,9 @@
       
 
       
-      
+      <h1 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h1><p><strong>姓名：</strong> huadong<br><strong>邮箱：</strong><a href="mailto:914188380@qq.com">914188380@qq.com</a><br><strong>爱好：</strong>炸鸡啤酒，快乐肥宅！</p>
+<p><img src="/images/about/98F998879CA72C2593EBDB773B8F404D.jpg" alt=""></p>
+
       
       <!-- reward -->
       
@@ -131,6 +170,8 @@
 <div id="share-mask"></div>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag">生活</a></li></ul>
+
 
     </footer>
 
@@ -138,6 +179,16 @@
 
   
   
+  <nav class="article-nav">
+    
+    
+      <a href="/hello-world/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Hello World</div>
+      </a>
+    
+  </nav>
+
 
   
 
@@ -195,6 +246,8 @@
 
   
 
+  
+  
   
 
 </article>
@@ -269,11 +322,11 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+      <a class="nav-item-link" href="/tags/%E7%94%9F%E6%B4%BB/">生活</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/2020/about">关于我</a>
+      <a class="nav-item-link" href="/about">关于我</a>
     </li>
     
   </ul>
@@ -360,6 +413,30 @@
 </script>
 
 
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer:'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+    onClick: (e) => {
+      $('.toc-link').removeClass('is-active-link');
+      $(`a[href=${e.target.hash}]`).addClass('is-active-link');
+      $(e.target.hash).scrollIntoView();
+      return false;
+    }
+  });
+</script>
 
 
 <script>
