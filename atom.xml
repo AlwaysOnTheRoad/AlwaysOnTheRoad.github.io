@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ontheroad.work/"/>
-  <updated>2020-03-06T13:02:11.959Z</updated>
+  <updated>2020-03-07T12:25:44.667Z</updated>
   <id>http://www.ontheroad.work/</id>
   
   <author>
@@ -17,58 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test</title>
-    <link href="http://www.ontheroad.work/test/"/>
-    <id>http://www.ontheroad.work/test/</id>
-    <published>2020-03-06T13:02:11.000Z</published>
-    <updated>2020-03-06T13:02:11.959Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>nanopi博客服务器</title>
-    <link href="http://www.ontheroad.work/nanopi%E5%8D%9A%E5%AE%A2%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    <id>http://www.ontheroad.work/nanopi%E5%8D%9A%E5%AE%A2%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
-    <published>2020-03-06T12:46:14.000Z</published>
-    <updated>2020-03-06T12:46:14.389Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>world</title>
-    <link href="http://www.ontheroad.work/world/"/>
-    <id>http://www.ontheroad.work/world/</id>
-    <published>2020-03-05T19:01:18.000Z</published>
-    <updated>2020-03-06T13:03:22.606Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-      <category term="diy" scheme="http://www.ontheroad.work/tags/diy/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Hello World</title>
     <link href="http://www.ontheroad.work/hello-world/"/>
     <id>http://www.ontheroad.work/hello-world/</id>
     <published>2020-03-05T18:56:36.632Z</published>
-    <updated>2020-03-07T11:04:59.347Z</updated>
+    <updated>2020-03-07T12:25:44.667Z</updated>
     
     <summary type="html">
     

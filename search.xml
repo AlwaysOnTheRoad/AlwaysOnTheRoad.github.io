@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>test</title>
-    <url>/test/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>nanopi博客服务器</title>
-    <url>/nanopi%E5%8D%9A%E5%AE%A2%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>world</title>
-    <url>/world/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>diy</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br>[TOC]</p>
@@ -33,8 +15,7 @@
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-<p><img src="https://pic.downk.cc/item/5e636cdd98271cb2b8d3cf6b.png" alt=""></p>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a><br><img src="/source/images/hello-world/Hd9b61099f54a428790b26259fe51df50E.png" alt=""></p>
 ]]></content>
   </entry>
 </search>
