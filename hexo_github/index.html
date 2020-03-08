@@ -64,7 +64,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">619字</span>
+            <span class="post-count">1.4k字</span>
         </span>
     </span>
 
@@ -73,7 +73,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">2分钟</span>
+            <span class="post-count">5分钟</span>
         </span>
     </span>
 </div>
@@ -123,12 +123,28 @@
 <h2 id="Hexo初始化"><a href="#Hexo初始化" class="headerlink" title="Hexo初始化"></a>Hexo初始化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
 <p>新建完成后，指定文件夹的目录如下:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
-<p><code>_config.yml</code>是网站的配置信息，等会部署到github 会修改其中参数（后面讲解），具体参数参考<a href="https://hexo.io/zh-cn/docs/setup" target="_blank" rel="noopener">Hexo官网</a></p>
+<p><code>_config.yml</code>是网站的配置信息，等会部署到github 会修改其中参数（后面讲解），具体参数参考<a href="https://hexo.io/zh-cn/docs/setup" target="_blank" rel="noopener">Hexo官网</a><br>生成初始页面看看效果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+<p>在浏览器中输入<code>http://localhost:4000</code>地址就可以看到当前的博客啦</p>
 <h2 id="github-配置"><a href="#github-配置" class="headerlink" title="github 配置"></a>github 配置</h2><ol>
 <li>首先在<a href="https://github.com/" target="_blank" rel="noopener">github官网</a>注册账号并登录，不讲了</li>
 <li>点击<code>new</code>创建新的repository，<code>Reposotory name</code>设置为`&lt;你的github用户名&gt;.github.io｀，如图所示，只要这样设置才能解析到你的github pages.<br><a href="https://imgchr.com/i/3zOL1P" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2020/03/08/3zOL1P.png" alt="3zOL1P.png"></a><br><img src="https://s2.ax1x.com/2020/03/08/3zXDjf.png" alt="3zXDjf.png"></li>
-<li></li>
+<li>创建好后回到，命令窗口配置github<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你注册的用的用户名&quot;</span><br><span class="line">git config --global user.email &quot;你注册用的邮箱&quot;</span><br></pre></td></tr></table></figure></li>
+<li>创建SSH ，一路回车直到创建完成<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure></li>
+<li>在github你当前创建的repository中点击<code>settings</code>找到SSH keys的设置选项，点击<code>New SSH key</code></li>
+<li>在命令窗口中cd 到<code>~/.ssh/</code>目录下将<code>id_rsa.pub</code>里面的内容复制上面方框中保存即可。</li>
+<li>测试SSH是否成功<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure></li>
+<li>更改<code>_config.yml</code>文件配置网页部署信息，YourgithubName就是你的github用户名<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:YourgithubName&#x2F;YourgithubName.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></li>
+<li>安装部署命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
+<li>重新编译部署<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+现在你的博客就部署好啦，可以通过<code>http://yourname.github.io</code>这个网址来访问自己的博客啦。<h2 id="个人域名绑定"><a href="#个人域名绑定" class="headerlink" title="个人域名绑定"></a>个人域名绑定</h2>如果你不喜欢这个域名，可以自己购买其他的域名来绑定你的博客，通过自己的域名及可直接访问<br>我在<a href="https://www.dnspod.cn/promo/domainscarnival?source=newDNSPod&from=Login" target="_blank" rel="noopener">DNSPOD</a>上购买的域名，赠送了免费的<a href="https://www.dnspod.cn/buy/package_details" target="_blank" rel="noopener">DNS云解析套餐</a>基本能够满足我的使用要求</li>
 </ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">境内 4 大智能线路细分</span><br><span class="line">10 个 DNS 节点分布</span><br><span class="line">3 级子域名</span><br><span class="line">600s TTL 最低值</span><br><span class="line">2 条 URL 转发</span><br><span class="line">2 条负载均衡</span><br><span class="line">1G 攻击防护流量</span><br><span class="line">7 大主流搜索引擎优化</span><br></pre></td></tr></table></figure>
+<p>建议在购买域名的时候不要看中首年多少钱，比如说首年１元的域名，第二年续费价格会很贵，土豪不用考虑这些<br>步入正题<br>免费版需要添加两个默认的解析<br><img src="https://s2.ax1x.com/2020/03/09/8S9joT.png" alt="8S9joT.png"><br>接下来在你创建的github repository下点击<code>settings</code>往下翻，找到<code>Custom domain</code>填入你想解析的顶级域名或者二级域名，然后点击<code>save</code>保存，此时你的repository里面会新增一个CNAME文件，里面就是你刚才输入的域名<br><img src="https://s2.ax1x.com/2020/03/09/8SPkcj.png" alt="8SPkcj.png"><br>回到DNSPOD控制台，点击<code>添加记录</code>，按图中所示添加第３条记录<br><img src="https://s2.ax1x.com/2020/03/09/8SPDvd.png" alt="8SPDvd.png"><br>其中<code>记录值</code>填入你的<code>github repository名＋.github.io</code>，比如说我填写的记录值就是<code>AlwaysOnTheRoad.github.io.</code><br>至此域名绑定已经完成，等待一段时间，你就可以通过自己的域名访问自己的博客啦！<br>如果你访问出现如下的404错误，不要惊慌，这说明你已绑定成功，还要再等待一会，就可以访问啦！<br><img src="https://s2.ax1x.com/2020/03/09/8SPh8g.png" alt="8SPh8g.png"></p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
+<li>利用Ｈexo＆Github 够建博客很简单，只是在执行的过程中会出现很多问题，每个人的问题都不一样，自己得针对问题找答案。</li>
+<li>使用中发现网页有时候加载比较慢，可以考虑将网页部署到coding上，毕竟服务器在国内，可能会快一点。我的解决办法是利用自己的Nanopi开发板搭建自己的服务器，目前架设完毕，速度丝滑，下一篇文章将具体介绍搭建教程。</li>
+</ul>
 
       
       <!-- reward -->
