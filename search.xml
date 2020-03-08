@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>利用Hexo&amp;github快速构建个人Blog</title>
+    <url>/hexo_github/</url>
+    <content><![CDATA[<h2 id="摘要："><a href="#摘要：" class="headerlink" title="摘要："></a>摘要：</h2><p>本文将分Hexo的安装、在github上部署、个人域名绑定三个部分介绍如何利用这两者在Ubuntu环境上搭建自己的个人博客。</p>
+<h2 id="要素介绍"><a href="#要素介绍" class="headerlink" title="要素介绍"></a>要素介绍</h2><ol>
+<li><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a>是一款快速、简洁且高效的博客框架，支持Markdown编写、支持一件部署、拥有200多款主题，插件丰富可扩展，在几秒内，即可利用靓丽的主题生成静态网页。</li>
+<li>github 众所周知一个有名的代码托管平台，github pages 是其为开发者免费提供的个人网站托管平台，只能托管静态内容。目前国内的coding代码托管平台也能够支持静态页面的托管，本次仅介绍在github上部署的过程，在coding的部署与之类似。</li>
+<li>我的运行环境：Ubuntu 18.04.4 LTS<a id="more"></a>
+
+</li>
+</ol>
+<h2 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h2><p>可以跟着我的步骤来，也可以直接参考<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo官方文档</a>（支持中文）</p>
+<ol>
+<li>安装 Git ：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install git-core</span><br></pre></td></tr></table></figure></li>
+<li>安装 Node.js：直接从<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js</a>官网下载安装后，在安装Hexo时可能会出现<code>EACCES</code>权限错误（官方建议不要使用sudo来解决），如有错误利用nvm全局安装解决错误，步骤如下。没有错误可跳过3、4、5、6、7步骤。</li>
+<li>下载nvm<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone git@github.com:nvm-sh&#x2F;nvm.git ~&#x2F;.nvm</span><br></pre></td></tr></table></figure></li>
+<li>设置淘宝registry提高下载速度<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm config set registry https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure></li>
+<li>~/.bashrc添加<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ export NVM_NODEJS_ORG_MIRROR&#x3D;https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;node</span><br><span class="line">$ export NVM_IOJS_ORG_MIRROR&#x3D;http:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;iojs</span><br><span class="line">$ . ~&#x2F;.nvm&#x2F;nvm.sh</span><br></pre></td></tr></table></figure></li>
+<li>使配置生效<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ . ~&#x2F;.bashrc</span><br></pre></td></tr></table></figure></li>
+<li>利用nvm安装node 和npm<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ nvm list-remote #查看可所有版本号</span><br><span class="line">$ nvm install &lt;你需要的版本号&gt;</span><br><span class="line">$ nvm use &lt;你需要的版本号&gt;</span><br><span class="line">example:</span><br><span class="line">$ nvm list-remote</span><br><span class="line">$ nvm install v13.10.1</span><br><span class="line">$ nvm use v13.10.1</span><br></pre></td></tr></table></figure></li>
+<li>安装 Hexo：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+至此Hexo的安装已经完成。</li>
+</ol>
+<h2 id="Hexo初始化"><a href="#Hexo初始化" class="headerlink" title="Hexo初始化"></a>Hexo初始化</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ mkdir &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>新建完成后，指定文件夹的目录如下:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+<p><code>_config.yml</code>是网站的配置信息，等会部署到github 会修改其中参数（后面讲解），具体参数参考<a href="https://hexo.io/zh-cn/docs/setup" target="_blank" rel="noopener">Hexo官网</a></p>
+<h2 id="github-配置"><a href="#github-配置" class="headerlink" title="github 配置"></a>github 配置</h2><ol>
+<li>首先在<a href="https://github.com/" target="_blank" rel="noopener">github官网</a>注册账号并登录，不讲了</li>
+<li>点击<code>new</code>创建新的repository，<code>Reposotory name</code>设置为`&lt;你的github用户名&gt;.github.io｀，如图所示，只要这样设置才能解析到你的github pages.<br><a href="https://imgchr.com/i/3zOL1P" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2020/03/08/3zOL1P.png" alt="3zOL1P.png"></a><br><img src="https://s2.ax1x.com/2020/03/08/3zXDjf.png" alt="3zXDjf.png"></li>
+<li></li>
+</ol>
+]]></content>
+      <categories>
+        <category>私人Blog</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>about</title>
     <url>/about/</url>
     <content><![CDATA[<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p><strong>姓名：</strong> huadong<br><strong>邮箱：</strong><a href="mailto:914188380@qq.com">914188380@qq.com</a><br><strong>爱好：</strong>炸鸡啤酒，快乐肥宅！</p>

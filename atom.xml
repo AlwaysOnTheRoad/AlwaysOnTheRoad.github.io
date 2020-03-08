@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ontheroad.work:8888/"/>
-  <updated>2020-03-08T06:32:23.956Z</updated>
+  <updated>2020-03-08T15:52:33.540Z</updated>
   <id>http://www.ontheroad.work:8888/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>利用Hexo&amp;github快速构建个人Blog</title>
+    <link href="http://www.ontheroad.work:8888/hexo_github/"/>
+    <id>http://www.ontheroad.work:8888/hexo_github/</id>
+    <published>2020-03-08T09:22:45.000Z</published>
+    <updated>2020-03-08T15:52:33.540Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;摘要：&quot;&gt;&lt;a href=&quot;#摘要：&quot; class=&quot;headerlink&quot; title=&quot;摘要：&quot;&gt;&lt;/a&gt;摘要：&lt;/h2&gt;&lt;p&gt;本文将分Hexo的安装、在github上部署、个人域名绑定三个部分介绍如何利用这两者在Ubuntu环境上搭建自己的个人博客。&lt;/p&gt;
+&lt;h2 id=&quot;要素介绍&quot;&gt;&lt;a href=&quot;#要素介绍&quot; class=&quot;headerlink&quot; title=&quot;要素介绍&quot;&gt;&lt;/a&gt;要素介绍&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://hexo.io/zh-cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;是一款快速、简洁且高效的博客框架，支持Markdown编写、支持一件部署、拥有200多款主题，插件丰富可扩展，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/li&gt;
+&lt;li&gt;github 众所周知一个有名的代码托管平台，github pages 是其为开发者免费提供的个人网站托管平台，只能托管静态内容。目前国内的coding代码托管平台也能够支持静态页面的托管，本次仅介绍在github上部署的过程，在coding的部署与之类似。&lt;/li&gt;
+&lt;li&gt;我的运行环境：Ubuntu 18.04.4 LTS
+    
+    </summary>
+    
+    
+      <category term="私人Blog" scheme="http://www.ontheroad.work:8888/categories/%E7%A7%81%E4%BA%BABlog/"/>
+    
+    
+      <category term="Blog" scheme="http://www.ontheroad.work:8888/tags/Blog/"/>
+    
+  </entry>
   
   <entry>
     <title>about</title>
