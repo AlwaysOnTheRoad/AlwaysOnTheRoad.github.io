@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>利用Hexo&amp;github快速构建个人Blog</title>
+    <title>利用Hexo&amp;Github快速构建个人Blog</title>
     <url>/hexo_github/</url>
-    <content><![CDATA[<h2 id="摘要："><a href="#摘要：" class="headerlink" title="摘要："></a>摘要：</h2><p>本文将分Hexo的安装、在github上部署、个人域名绑定三个部分介绍如何利用这两者在Ubuntu环境上搭建自己的个人博客。</p>
-<h2 id="要素介绍"><a href="#要素介绍" class="headerlink" title="要素介绍"></a>要素介绍</h2><p>1.<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a>是一款快速、简洁且高效的博客框架，支持Markdown编写、支持一件部署、拥有200多款主题，插件丰富可扩展，在几秒内，即可利用靓丽的主题生成静态网页。<br>2.github 众所周知一个有名的代码托管平台，github pages 是其为开发者免费提供的个人网站托管平台，只能托管静态内容。目前国内的coding代码托管平台也能够支持静态页面的托管，本次仅介绍在github上部署的过程，在coding的部署与之类似。<br>3.我的运行环境：Ubuntu 18.04.4 LTS</p>
+    <content><![CDATA[<h2 id="摘要："><a href="#摘要：" class="headerlink" title="摘要："></a>摘要：</h2><p>本文将分为Hexo的安装、在github上部署、个人域名绑定三个部分介绍如何利用这两者在Ubuntu环境上搭建自己的个人博客。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>1.<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a>是一款快速、简洁且高效的博客框架，支持Markdown编写、支持一件部署、拥有200多款主题，插件丰富可扩展，在几秒内，即可利用靓丽的主题生成静态网页。<br>2.github 众所周知一个有名的代码托管平台，github pages 是其为开发者免费提供的个人网站托管平台，只能托管静态内容。目前国内的coding代码托管平台也能够支持静态页面的托管，本次仅介绍在github上部署的过程，在coding的部署与之类似。<br>3.我的运行环境：Ubuntu 18.04.4 LTS</p>
 <a id="more"></a>
 
 <h2 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h2><p>可以跟着我的步骤来，也可以直接参考<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo官方文档</a>（支持中文）<br>1.安装 Git ：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ sudo apt-get install git-core</span><br></pre></td></tr></table></figure>
-<p>2.安装 Node.js：直接从<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js</a>官网下载安装后，在安装Hexo时可能会出现<code>EACCES</code>权限错误（官方建议不要使用sudo来解决），如有错误利用nvm全局安装解决错误，步骤如下。没有错误可跳过3、4、5、6、7步骤。<br>3.下载nvm</p>
+<p>2.安装 Node.js：直接从<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js</a>官网下载安装后，执行第８步安装Hexo时可能会出现<code>EACCES</code>权限错误（官方建议不要使用sudo来解决），如有错误利用<code>nvm</code>全局安装解决错误，步骤如下。没有错误可跳过3、4、5、6、7步骤。<br>3.下载nvm</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone git@github.com:nvm-sh&#x2F;nvm.git ~&#x2F;.nvm</span><br></pre></td></tr></table></figure>
 <p>4.设置淘宝registry提高下载速度</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm config set registry https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
@@ -28,13 +28,13 @@
 <p><code>_config.yml</code>是网站的配置信息，等会部署到github 会修改其中参数（后面讲解），具体参数参考<a href="https://hexo.io/zh-cn/docs/setup" target="_blank" rel="noopener">Hexo官网</a><br>生成初始页面看看效果</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
 <p>在浏览器中输入<code>http://localhost:4000</code>地址就可以看到当前的博客啦</p>
-<h2 id="github-配置"><a href="#github-配置" class="headerlink" title="github 配置"></a>github 配置</h2><p>1.首先在<a href="https://github.com/" target="_blank" rel="noopener">github官网</a>注册账号并登录，不讲了<br>2.点击<code>new</code>创建新的repository，<code>Reposotory name</code>设置为`&lt;你的github用户名&gt;.github.io｀，如图所示，只要这样设置才能解析到你的github pages.<br><a href="https://imgchr.com/i/3zOL1P" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2020/03/08/3zOL1P.png" alt="3zOL1P.png"></a><br><img src="https://s2.ax1x.com/2020/03/08/3zXDjf.png" alt="3zXDjf.png"><br>3.创建好后回到，命令窗口配置github</p>
+<h2 id="github-配置"><a href="#github-配置" class="headerlink" title="github 配置"></a>github 配置</h2><p>1.首先在<a href="https://github.com/" target="_blank" rel="noopener">github官网</a>注册账号并登录，不讲了<br>2.点击<code>new</code>创建新的repository，<code>Reposotory name</code>设置为<code>&lt;你的github用户名&gt;.github.io</code>，如图所示，只要这样设置才能解析到你的github pages.<br><a href="https://imgchr.com/i/3zOL1P" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2020/03/08/3zOL1P.png" alt="3zOL1P.png"></a><br><img src="https://s2.ax1x.com/2020/03/08/3zXDjf.png" alt="3zXDjf.png"><br>3.创建好后回到命令窗口配置github</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;你注册的用的用户名&quot;</span><br><span class="line">git config --global user.email &quot;你注册用的邮箱&quot;</span><br></pre></td></tr></table></figure>
-<p>4.创建SSH ，一路回车直到创建完成</p>
+<p>4.创建SSH ，一路回车直到创建完成，<code>your email</code>为你的github注册邮箱</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
 <p>5.在github你当前创建的repository中点击<code>settings</code>找到SSH keys的设置选项，点击<code>New SSH key</code><br>6.在命令窗口中cd 到<code>~/.ssh/</code>目录下将<code>id_rsa.pub</code>里面的内容复制上面方框中保存即可。<br>7.测试SSH是否成功</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-<p>8.更改<code>_config.yml</code>文件配置网页部署信息，YourgithubName就是你的github用户名</p>
+<p>8.更改<code>_config.yml</code>文件配置网页部署信息，<code>YourgithubName</code>就是你的github用户名</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:YourgithubName&#x2F;YourgithubName.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <p>9.安装部署命令</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
@@ -43,24 +43,24 @@
 <p>现在你的博客就部署好啦，可以通过<code>http://yourname.github.io</code>这个网址来访问自己的博客啦。</p>
 <h2 id="个人域名绑定"><a href="#个人域名绑定" class="headerlink" title="个人域名绑定"></a>个人域名绑定</h2><p>如果你不喜欢这个域名，可以自己购买其他的域名来绑定你的博客，通过自己的域名及可直接访问<br>我在<a href="https://www.dnspod.cn/promo/domainscarnival?source=newDNSPod&from=Login" target="_blank" rel="noopener">DNSPOD</a>上购买的域名，赠送了免费的<a href="https://www.dnspod.cn/buy/package_details" target="_blank" rel="noopener">DNS云解析套餐</a>基本能够满足我的使用要求</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">境内 4 大智能线路细分</span><br><span class="line">10 个 DNS 节点分布</span><br><span class="line">3 级子域名</span><br><span class="line">600s TTL 最低值</span><br><span class="line">2 条 URL 转发</span><br><span class="line">2 条负载均衡</span><br><span class="line">1G 攻击防护流量</span><br><span class="line">7 大主流搜索引擎优化</span><br></pre></td></tr></table></figure>
-<p>建议在购买域名的时候不要看中首年多少钱，比如说首年１元的域名，第二年续费价格会很贵，土豪不用考虑这些<br>步入正题<br>免费版需要添加两个默认的解析<br><img src="https://s2.ax1x.com/2020/03/09/8S9joT.png" alt="8S9joT.png"><br>接下来在你创建的github repository下点击<code>settings</code>往下翻，找到<code>Custom domain</code>填入你想解析的顶级域名或者二级域名，然后点击<code>save</code>保存，此时你的repository里面会新增一个CNAME文件，里面就是你刚才输入的域名<br><img src="https://s2.ax1x.com/2020/03/09/8SPkcj.png" alt="8SPkcj.png"><br>回到DNSPOD控制台，点击<code>添加记录</code>，按图中所示添加第３条记录<br><img src="https://s2.ax1x.com/2020/03/09/8SPDvd.png" alt="8SPDvd.png"><br>其中<code>记录值</code>填入你的<code>github repository名＋.github.io</code>，比如说我填写的记录值就是<code>AlwaysOnTheRoad.github.io.</code><br>至此域名绑定已经完成，等待一段时间，你就可以通过自己的域名访问自己的博客啦！<br>如果你访问出现如下的404错误，不要惊慌，这说明你已绑定成功，还要再等待一会，就可以访问啦！<br><img src="https://s2.ax1x.com/2020/03/09/8SPh8g.png" alt="8SPh8g.png"></p>
+<p>建议在购买域名的时候不要只看重首年多少钱，比如说首年１元的域名，第二年续费价格会很贵，土豪不用考虑这些<br>步入正题<br>免费版需要添加两个默认的解析<br><img src="https://s2.ax1x.com/2020/03/09/8S9joT.png" alt="8S9joT.png"><br>接下来在你创建的github repository下点击<code>settings</code>往下翻，找到<code>Custom domain</code>填入你想解析的顶级域名或者二级域名，然后点击<code>save</code>保存，此时你的repository里面会新增一个CNAME文件，里面就是你刚才输入的域名<br><img src="https://s2.ax1x.com/2020/03/09/8SPkcj.png" alt="8SPkcj.png"><br>回到DNSPOD控制台，点击<code>添加记录</code>，按图中所示添加第３条记录<br><img src="https://s2.ax1x.com/2020/03/09/8SPDvd.png" alt="8SPDvd.png"><br>其中<code>记录值</code>填入你的<code>github repository名＋.github.io</code>，比如说我填写的记录值就是<code>AlwaysOnTheRoad.github.io.</code><br>至此域名绑定已经完成，等待一段时间，你就可以通过自己的域名访问自己的博客啦！<br>如果你访问出现如下的404错误，不要惊慌，这说明你已绑定成功，还要再等待一会，就可以访问啦！<br><img src="https://s2.ax1x.com/2020/03/09/8SPh8g.png" alt="8SPh8g.png"></p>
 <h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
 <li>利用Ｈexo＆Github 够建博客很简单，只是在执行的过程中会出现很多问题，每个人的问题都不一样，自己得针对问题找答案。</li>
 <li>使用中发现，有时候加载速度有点慢，可以考虑将其部署到coding上，毕竟是国内的服务器，速度应该快点，不过听说容量限制在128M以内，我也不清楚，我的解决方法是利用自己的Nanopi开发板搭建自己的服务器，将网页部署在上面，目前已架设完成，速度丝滑，下一篇文章将出详细教程。</li>
 </ul>
 ]]></content>
       <categories>
-        <category>私人Blog</category>
+        <category>个人Blog</category>
       </categories>
       <tags>
         <tag>Blog</tag>
       </tags>
   </entry>
   <entry>
-    <title>about</title>
+    <title>About me</title>
     <url>/about/</url>
     <content><![CDATA[<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p><strong>姓名：</strong> huadong<br><strong>邮箱：</strong><a href="mailto:914188380@qq.com">914188380@qq.com</a><br><strong>爱好：</strong>炸鸡啤酒，快乐肥宅！</p>
-<p><img src="/images/about/98F998879CA72C2593EBDB773B8F404D.jpg" alt=""></p>
+<p><img src="https://s2.ax1x.com/2020/03/09/8Sy6OK.jpg" alt="8Sy6OK.jpg"></p>
 ]]></content>
       <tags>
         <tag>生活</tag>
