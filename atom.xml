@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ontheroad.work:8888/"/>
-  <updated>2020-03-09T13:09:10.873Z</updated>
+  <updated>2020-03-09T13:29:14.225Z</updated>
   <id>http://www.ontheroad.work:8888/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="http://www.ontheroad.work:8888/nanopi_hexo/"/>
     <id>http://www.ontheroad.work:8888/nanopi_hexo/</id>
     <published>2020-03-09T05:29:01.000Z</published>
-    <updated>2020-03-09T13:09:10.873Z</updated>
+    <updated>2020-03-09T13:29:14.225Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h2&gt;&lt;p&gt;本文利用Nanopi NEO2架设Hexo Blog服务器，相较于github pages，本服务器拥有更快的访问速度，还具有更过的功能扩展性；结构上主要从公网ip的获取、路由器设置、端口映射、动态域名解析、Nanopi 环境安装，定时任务创建这六个方面来阐述安装过程以及可能会遇到的问题的解决办法。&lt;br&gt;&lt;img src=&quot;https://s2.ax1x.com/2020/03/09/8pCYPU.jpg&quot; alt=&quot;8pCYPU.jpg&quot;&gt;&lt;/p&gt;
+      &lt;h2 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h2&gt;&lt;p&gt;本文利用Nanopi NEO2架设Hexo Blog服务器，相较于github pages，本服务器拥有更快的访问速度，还具有更完备的功能扩展性；结构上主要从公网ip的获取、路由器设置、端口映射、动态域名解析、Nanopi 环境安装，定时任务创建这六个方面来阐述安装过程以及可能会遇到的问题的解决办法。&lt;br&gt;&lt;img src=&quot;https://s2.ax1x.com/2020/03/09/8pCYPU.jpg&quot; alt=&quot;8pCYPU.jpg&quot;&gt;&lt;/p&gt;
     
     </summary>
     
